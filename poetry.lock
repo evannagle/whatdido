@@ -32,17 +32,6 @@ test = ["anyio[trio]", "coverage[toml] (>=7)", "exceptiongroup (>=1.2.0)", "hypo
 trio = ["trio (>=0.23)"]
 
 [[package]]
-name = "argparse"
-version = "1.4.0"
-description = "Python command-line parsing library"
-optional = false
-python-versions = "*"
-files = [
-    {file = "argparse-1.4.0-py2.py3-none-any.whl", hash = "sha256:c31647edb69fd3d465a847ea3157d37bed1f95f19760b11a47aa91c04b666314"},
-    {file = "argparse-1.4.0.tar.gz", hash = "sha256:62b089a55be1d8949cd2bc7e0df0bddb9e028faefc8c32038cc84862aefdd6e4"},
-]
-
-[[package]]
 name = "black"
 version = "24.3.0"
 description = "The uncompromising code formatter."
@@ -1067,4 +1056,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11, <=3.13"
-content-hash = "df8d716aa021b5a4373a0c38d85b3e4cbd6df4116919f4a8fd998334c3914e1e"
+content-hash = "de84e026bbaf3f97cb8977e6868e4cf6eace4bf89ecce08c6a1d1f01e2491cd5"

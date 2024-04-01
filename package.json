@@ -2,7 +2,7 @@
   "name": "whatdido",
   "pythonPackageName": "whatdido",
   "version": "1.0.0",
-  "description": "",
+  "description": "Use AI to write your git commit messages",
   "main": "scripts/makefile-parser.js",
   "directories": {},
   "scripts": {

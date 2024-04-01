@@ -1,84 +1,42 @@
-# Pyboot
+# Whatdido
 
-This is a simple Python application template for Python projects designed to streamline your development workflow.
+No more "git commit -m "adsfkjaef"" in a fit of rage. Simply type `dido` to add your changes and write a simple and sane commit message.
 
-Features include:
+**This package is in an exploratory beta state. Please use carefully and at your own risk.**
 
-- Dependency management with Poetry: https://python-poetry.org/: Poetry provides a powerful way to manage project dependencies, creating isolated environments and handling version conflicts.
-- Code formatting with Black: https://black.readthedocs.io/en/stable/: Black enforces consistent, opinionated code formatting, enhancing readability and collaboration.
-- Linting with Ruff: [invalid URL removed]: Ruff helps find potential bugs, stylistic issues, and maintain a clean codebase.
-  Unit testing with Pytest: https://docs.pytest.org/en/latest/: Pytest provides a flexible and popular framework for writing and running tests that ensure your code's correctness.
-- Changelog management with towncrier: https://towncrier.readthedocs.io/en/latest/: Maintain well-structured changelogs to track project changes.
-- Automation script management with Node and/or Python: Streamline common tasks (e.g., building, testing, deploying) with customizable scripts.
-- Pre- and post-commit sanity checks with Husky: https://typicode.github.io/husky/: Enforce quality standards at commit time to catch issues early.
-- Documentation creation with MkDocs: https://www.mkdocs.org/: Easily create beautiful technical documentation for your project.
+## Installation
 
-## Setup
+```python
+pip install whatdido
 
-1. Create a copy of the template
+alias dido="git add -A && git commit -m "$(whatdido summary)""
 
-```bash
-gh repo create happy-bog --template git@github.com:evannagle/whatdido.git  --private --clone
 ```
 
-2. Install dependencies
+## Usage
 
-```bash
-cd happy-bog
+```
+whatdido --help
 
-make install
+ Usage: whatdido [OPTIONS] COMMAND [ARGS]...
+
+╭─ Options ────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell.  │
+│ --show-completion             Show completion for the current shell, to  │
+│                               copy it or customize the installation.     │
+│ --help                        Show this message and exit.                │
+╰──────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────╮
+│ commit     Edit the message using the user's preferred editor.           │
+│ config                                                                   │
+│ diff       Get the terse diff of the staged changes.                     │
+│ summary    Summarize the changes in the repository.                      │
+╰──────────────────────────────────────────────────────────────────────────╯
+
 ```
 
-3. Rename the app
+## Quick commit command
 
-```bash
-make rename
 ```
-
-4. Run the app
-
-```bash
-make app
-```
-
-Which should output:
-
-```bash
-
-🤖 Cleaning up
-rm -rf __pycache__ .pytest_cache .coverage .mypy_cache .tox .eggs .venv
-
-🤖 Building the project
-poetry install
-Installing dependencies from lock file
-
-No dependencies to install or update
-
-Installing the current project: whatdido (0.1.0)
-
-🤖 Running the app
-poetry run whatdido
-42
-```
-
-5. Test the app
-
-```bash
-make test
-```
-
-6. Review test coverage
-
-```bash
-make coverage
-```
-
-7. Globalize the command for use from your command line
-
-```bash
-make globalize
-
-happy-bog
-
-> 42
+alias dido="git add -A && git commit -m "$(whatdido summary)""
 ```
