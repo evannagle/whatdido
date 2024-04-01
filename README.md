@@ -18,9 +18,10 @@ git add tony.txt
 whatdido summary
 
 > Added new file 'tony.txt' containing the text \"Here's a new file for Tony\".
+
 ```
 
-Add the following bash function to your config file:
+Here's a bash helper function for quicker usage:
 
 ```bash
 dido() {
@@ -43,16 +44,9 @@ whatdido --help
 │ --help                        Show this message and exit.                │
 ╰──────────────────────────────────────────────────────────────────────────╯
 ╭─ Commands ───────────────────────────────────────────────────────────────╮
-│ commit     Edit the message using the user's preferred editor.           │
+│ commit     Edit the summary and commit to the repo in one shot           |
 │ config                                                                   │
 │ diff       Get the terse diff of the staged changes.                     │
 │ summary    Summarize the changes in the repository.                      │
 ╰──────────────────────────────────────────────────────────────────────────╯
-
-```
-
-## Quick commit command
-
-```
-alias dido="git add -A && git commit -m "$(whatdido summary)""
 ```
