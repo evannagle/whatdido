@@ -6,11 +6,27 @@ No more "git commit -m "adsfkjaef"" in a fit of rage. Simply type `dido` to add 
 
 ## Installation
 
-```python
+```bash
 pip install whatdido
 
-alias dido="git add -A && git commit -m "$(whatdido summary)""
+cd <any repo>
 
+echo "Here's a new file for Tony" > "tony.txt"
+
+git add tony.txt
+
+whatdido summary
+
+> Added new file 'tony.txt' containing the text \"Here's a new file for Tony\".
+```
+
+Add the following bash function to your config file:
+
+```bash
+dido() {
+    git add -A
+    git commit -m "$(whatdido summary)"
+}
 ```
 
 ## Usage
