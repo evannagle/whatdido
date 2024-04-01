@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "whatdido"
-version = "0.1.0"
-description = "My template for creating quick python scripts."
+version = "0.2.0"
+description = "Use AI to write your git commit messages."
 authors = ["Evan Nagle <evan.nagle@gmail.com>"]
 license = "GPL-2.0"
 readme = "README.md"
